@@ -40,6 +40,3 @@ print(response)
 
 ## Contributing
 We welcome contributions! Please read our contribution guidelines before submitting a pull request.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
