@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Parse an AWS CloudFormation template and extract all resource logical IDs that are of type AWS::S3::Bucket",
+    "format": "python",
+    "solution_criteria": "Function should return a list of logical IDs for all S3 buckets defined in a CloudFormation template dictionary. Should handle nested structures and return an empty list if no S3 buckets are found."
+  },
+  {
+    "task": "Create a JSON configuration object for an AWS Lambda function that processes S3 events, with environment variables for log level and SNS topic ARN",
+    "format": "json",
+    "solution_criteria": "JSON object should include function name, runtime, handler, role ARN placeholder, environment variables section with LOG_LEVEL and SNS_TOPIC_ARN keys, and timeout/memory settings appropriate for S3 processing."
+  },
+  {
+    "task": "Create a regular expression to validate AWS IAM role ARN format (arn:aws:iam::account-id:role/role-name)",
+    "format": "regex",
+    "solution_criteria": "Regex should match valid IAM role ARNs, capture the account ID and role name, reject invalid formats, and handle role names with hyphens and forward slashes."
+  }
+]

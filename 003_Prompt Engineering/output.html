@@ -1,0 +1,190 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">4</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">8.0 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">100.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a dense humanities passage containing overlapping themes (literature, history, philosophy) to evaluate whether the prompt correctly disambiguates related but distinct topics</td>
+                <td class="prompt-inputs"><strong>content:</strong> The Renaissance humanist movement fundamentally challenged medieval scholasticism by recuperating classical texts, yet this philological recovery was inseparable from emerging nationalist identities and the consolidation of state power in early modern Europe. While scholars like Petrarch advocated for a return to Ciceronian rhetoric as a moral philosophy emphasizing civic virtue, their intellectual project simultaneously served dynastic patronage systems and the legitimation of princely authority. Furthermore, the printing press's technological mediation of textual dissemination created new epistemological questions about authorship and authenticity, problems that intersected with theological debates over scriptural interpretation during the Reformation. Thus, the period witnessed not merely a literary or philosophical shift, but a complex entanglement of aesthetic, political, and religious transformations that reshaped European intellectual culture.</td>
+                <td class="criteria">• Extracts distinct topics despite their thematic overlap and interconnection within the passage<br>• Distinguishes between overlapping concepts (e.g., humanism vs. philology, rhetoric vs. moral philosophy, nationalism vs. state power)<br>• Identifies all major topic domains present: literary/textual, philosophical, historical, technological, and theological</td>
+                <td class="output"><pre>```json
+["Renaissance humanism", "classical texts", "medieval scholasticism", "nationalist identities", "state power", "Ciceronian rhetoric", "civic virtue", "dynastic patronage", "printing press", "authorship", "authenticity", "Reformation", "scriptural interpretation", "European intellectual culture"]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings containing only topics without extra explanation or formatting. Regarding secondary criteria, it successfully identifies topics across all five major domains (literary/textual, philosophical, historical, technological, theological) and distinguishes between overlapping concepts effectively. However, it has minor deficiencies in comprehensiveness—notably missing 'philology' (a key intellectual practice), 'moral philosophy' (explicitly distinguished from rhetoric), and the systemic aspect of patronage. These are relatively minor omissions in an otherwise strong extraction that captures the passage's core themes.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a highly technical scientific abstract using domain-specific jargon and acronyms to verify the prompt extracts specialized topics without over-fragmenting or under-generalizing</td>
+                <td class="prompt-inputs"><strong>content:</strong> Recent advances in CRISPR-Cas9 gene editing have demonstrated remarkable efficacy in treating monogenic disorders through precise DNA cleavage and homology-directed repair (HDR) mechanisms. The off-target effects, previously a critical limitation, have been substantially mitigated through high-fidelity Cas9 variants and optimized sgRNA design protocols. Furthermore, the development of base editors and prime editors has expanded the therapeutic repertoire beyond simple insertions and deletions, enabling transversion mutations without generating double-strand breaks. Clinical trials investigating AAV-mediated delivery of SpCas9 to hepatocytes show promise for treating transthyretin amyloidosis, while ex vivo CAR-T cell engineering utilizing CRISPR multiplexing has achieved complete remission in certain B-cell malignancies. However, immunogenicity concerns related to Cas9 protein and potential innate immune activation through TLR pathways remain significant challenges for in vivo applications.</td>
+                <td class="criteria">• Extracts major technical topics (CRISPR-Cas9, gene editing variants, delivery methods) without fragmenting into overly granular subtopics<br>• Includes domain-specific concepts (HDR, off-target effects, base editors, prime editors, CAR-T cells) as distinct topics where appropriate<br>• Avoids listing every acronym or minor detail as separate topics while capturing the core specialized areas discussed</td>
+                <td class="output"><pre>```json
+["CRISPR-Cas9 gene editing", "monogenic disorders", "off-target effects", "base editors", "prime editors", "AAV-mediated delivery", "transthyretin amyloidosis", "CAR-T cell engineering", "B-cell malignancies", "immunogenicity", "innate immune activation"]
+```</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings containing only topic names without extra explanation or formatting. Regarding secondary criteria, it successfully extracts major technical topics and avoids over-granularity. However, it has notable omissions of domain-specific concepts that are explicitly discussed as distinct technical areas (HDR mechanisms, high-fidelity variants, sgRNA design). These are not minor details but rather core specialized concepts that warrant inclusion based on the criteria requiring capture of 'domain-specific concepts as distinct topics where appropriate.' The solution captures approximately 11 topics but misses 3 significant ones that meet the inclusion threshold.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a short, ambiguous passage where topic boundaries are unclear to assess whether the prompt produces reasonable interpretations when source material lacks explicit topic delineation</td>
+                <td class="prompt-inputs"><strong>content:</strong> Recent advances in neuroplasticity research suggest that cognitive rehabilitation through targeted sensory stimulation can enhance neural pathway reorganization, particularly in stroke patients where motor recovery depends on both hemispheric compensation and interhemispheric communication. The mechanisms underlying this recovery involve synaptic remodeling, which is influenced by factors such as exercise intensity, timing of intervention, and individual genetic variation in neurotrophic factor expression.</td>
+                <td class="criteria">• All main topics are extracted (e.g., neuroplasticity, cognitive rehabilitation, motor recovery, synaptic remodeling)<br>• Topics represent distinct conceptual areas despite their interconnected nature in the passage<br>• No irrelevant details are included as standalone topics</td>
+                <td class="output"><pre>```json
+["neuroplasticity research", "cognitive rehabilitation", "sensory stimulation", "neural pathway reorganization", "stroke recovery", "motor recovery", "hemispheric compensation", "interhemispheric communication", "synaptic remodeling", "exercise intensity", "intervention timing", "neurotrophic factor expression"]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing only topics without extra explanation or formatting, and nothing else is included in the response. Regarding secondary criteria, the solution successfully extracts all main topics and represents distinct conceptual areas. However, there is a slight issue with topic granularity—some items like 'exercise intensity' and 'intervention timing' are more specific factors than standalone topics, and 'stroke recovery' somewhat overlaps with 'motor recovery'. Despite these minor issues, the extraction is comprehensive and appropriate for a scholarly article analysis.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a multi-disciplinary passage that bridges social sciences, economics, and policy to determine if the prompt handles cross-domain topics and identifies both broad themes and narrow subtopics appropriately</td>
+                <td class="prompt-inputs"><strong>content:</strong> The emergence of gig economy platforms has fundamentally reshaped labor market dynamics across developed economies, presenting both opportunities and challenges for workers and policymakers alike. From an economic perspective, these platforms reduce transaction costs and increase market efficiency by matching supply and demand in real-time, yet they simultaneously create wage volatility and income uncertainty for workers who lack traditional employment protections. Social scientists have documented significant stratification effects, where algorithmic management systems perpetuate gender and racial disparities in task allocation and earnings potential. Policy interventions remain contested: while some jurisdictions have implemented classification reforms treating gig workers as employees entitled to benefits and minimum wage protections, others have adopted lighter regulatory frameworks emphasizing platform innovation and worker autonomy. The macroeconomic implications extend to tax revenue collection, social safety net sustainability, and the erosion of employer-sponsored healthcare systems, requiring coordinated responses across labor departments, tax authorities, and social policy agencies.</td>
+                <td class="criteria">• Identifies broad cross-domain themes (gig economy, labor markets, economic efficiency, social inequality, policy regulation)<br>• Captures domain-specific subtopics (algorithmic management, wage volatility, employment classification, tax implications, healthcare systems)<br>• Distinguishes between concepts from different disciplines (economics, sociology, policy studies)<br>• Returns results as a JSON array of strings without duplicates</td>
+                <td class="output"><pre>```json
+["gig economy platforms", "labor market dynamics", "worker protections", "algorithmic management", "wage volatility", "income inequality", "gender and racial disparities", "policy interventions", "worker classification", "employment benefits", "regulatory frameworks", "macroeconomic implications", "tax revenue", "social safety net", "healthcare systems"]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing only topic names without extra explanation or formatting, and nothing else is included in the response. Regarding secondary criteria, the solution excellently identifies broad cross-domain themes (gig economy, labor markets, policy regulation), captures domain-specific subtopics (algorithmic management, wage volatility, employment classification, tax revenue, healthcare systems), and distinguishes between concepts from different disciplines. The extraction is comprehensive and well-balanced. The only minor issue is the inclusion of 'income inequality' which is semantically related but not explicitly stated in the passage (which discusses 'income uncertainty' instead). This is a very minor deviation that does not significantly impact the overall quality of the extraction.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    

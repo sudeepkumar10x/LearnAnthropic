@@ -1,0 +1,51 @@
+[
+  {
+    "prompt_inputs": {
+      "content": "The Renaissance humanist movement fundamentally challenged medieval scholasticism by recuperating classical texts, yet this philological recovery was inseparable from emerging nationalist identities and the consolidation of state power in early modern Europe. While scholars like Petrarch advocated for a return to Ciceronian rhetoric as a moral philosophy emphasizing civic virtue, their intellectual project simultaneously served dynastic patronage systems and the legitimation of princely authority. Furthermore, the printing press's technological mediation of textual dissemination created new epistemological questions about authorship and authenticity, problems that intersected with theological debates over scriptural interpretation during the Reformation. Thus, the period witnessed not merely a literary or philosophical shift, but a complex entanglement of aesthetic, political, and religious transformations that reshaped European intellectual culture."
+    },
+    "solution_criteria": [
+      "Extracts distinct topics despite their thematic overlap and interconnection within the passage",
+      "Distinguishes between overlapping concepts (e.g., humanism vs. philology, rhetoric vs. moral philosophy, nationalism vs. state power)",
+      "Identifies all major topic domains present: literary/textual, philosophical, historical, technological, and theological"
+    ],
+    "task_description": "Extract topics out of the passage of text from a scholarly article into a JSON array of strings.",
+    "scenario": "Testing with a dense humanities passage containing overlapping themes (literature, history, philosophy) to evaluate whether the prompt correctly disambiguates related but distinct topics"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Recent advances in CRISPR-Cas9 gene editing have demonstrated remarkable efficacy in treating monogenic disorders through precise DNA cleavage and homology-directed repair (HDR) mechanisms. The off-target effects, previously a critical limitation, have been substantially mitigated through high-fidelity Cas9 variants and optimized sgRNA design protocols. Furthermore, the development of base editors and prime editors has expanded the therapeutic repertoire beyond simple insertions and deletions, enabling transversion mutations without generating double-strand breaks. Clinical trials investigating AAV-mediated delivery of SpCas9 to hepatocytes show promise for treating transthyretin amyloidosis, while ex vivo CAR-T cell engineering utilizing CRISPR multiplexing has achieved complete remission in certain B-cell malignancies. However, immunogenicity concerns related to Cas9 protein and potential innate immune activation through TLR pathways remain significant challenges for in vivo applications."
+    },
+    "solution_criteria": [
+      "Extracts major technical topics (CRISPR-Cas9, gene editing variants, delivery methods) without fragmenting into overly granular subtopics",
+      "Includes domain-specific concepts (HDR, off-target effects, base editors, prime editors, CAR-T cells) as distinct topics where appropriate",
+      "Avoids listing every acronym or minor detail as separate topics while capturing the core specialized areas discussed"
+    ],
+    "task_description": "Extract topics out of the passage of text from a scholarly article into a JSON array of strings.",
+    "scenario": "Testing with a highly technical scientific abstract using domain-specific jargon and acronyms to verify the prompt extracts specialized topics without over-fragmenting or under-generalizing"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Recent advances in neuroplasticity research suggest that cognitive rehabilitation through targeted sensory stimulation can enhance neural pathway reorganization, particularly in stroke patients where motor recovery depends on both hemispheric compensation and interhemispheric communication. The mechanisms underlying this recovery involve synaptic remodeling, which is influenced by factors such as exercise intensity, timing of intervention, and individual genetic variation in neurotrophic factor expression."
+    },
+    "solution_criteria": [
+      "All main topics are extracted (e.g., neuroplasticity, cognitive rehabilitation, motor recovery, synaptic remodeling)",
+      "Topics represent distinct conceptual areas despite their interconnected nature in the passage",
+      "No irrelevant details are included as standalone topics"
+    ],
+    "task_description": "Extract topics out of the passage of text from a scholarly article into a JSON array of strings.",
+    "scenario": "Testing with a short, ambiguous passage where topic boundaries are unclear to assess whether the prompt produces reasonable interpretations when source material lacks explicit topic delineation"
+  },
+  {
+    "prompt_inputs": {
+      "content": "The emergence of gig economy platforms has fundamentally reshaped labor market dynamics across developed economies, presenting both opportunities and challenges for workers and policymakers alike. From an economic perspective, these platforms reduce transaction costs and increase market efficiency by matching supply and demand in real-time, yet they simultaneously create wage volatility and income uncertainty for workers who lack traditional employment protections. Social scientists have documented significant stratification effects, where algorithmic management systems perpetuate gender and racial disparities in task allocation and earnings potential. Policy interventions remain contested: while some jurisdictions have implemented classification reforms treating gig workers as employees entitled to benefits and minimum wage protections, others have adopted lighter regulatory frameworks emphasizing platform innovation and worker autonomy. The macroeconomic implications extend to tax revenue collection, social safety net sustainability, and the erosion of employer-sponsored healthcare systems, requiring coordinated responses across labor departments, tax authorities, and social policy agencies."
+    },
+    "solution_criteria": [
+      "Identifies broad cross-domain themes (gig economy, labor markets, economic efficiency, social inequality, policy regulation)",
+      "Captures domain-specific subtopics (algorithmic management, wage volatility, employment classification, tax implications, healthcare systems)",
+      "Distinguishes between concepts from different disciplines (economics, sociology, policy studies)",
+      "Returns results as a JSON array of strings without duplicates"
+    ],
+    "task_description": "Extract topics out of the passage of text from a scholarly article into a JSON array of strings.",
+    "scenario": "Testing with a multi-disciplinary passage that bridges social sciences, economics, and policy to determine if the prompt handles cross-domain topics and identifies both broad themes and narrow subtopics appropriately"
+  }
+]
