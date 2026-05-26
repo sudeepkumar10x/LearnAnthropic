@@ -1,0 +1,61 @@
+Absolutely — I cross-checked the course titles against the current [Anthropic Academy (Skilljar) catalog](https://anthropic.skilljar.com/?utm_source=chatgpt.com) and here are the **exact course names** that are available today.
+
+---
+
+# ✅ Verified Anthropic Skilljar Courses for CCA-F Preparation
+
+## Week 1 — Agentic Architecture & Orchestration
+
+* [Building with the Claude API](https://anthropic.skilljar.com/building-with-the-claude-api?utm_source=chatgpt.com)
+* [Introduction to subagents](https://anthropic.skilljar.com/introduction-to-subagents?utm_source=chatgpt.com)
+* [Introduction to Claude Cowork](https://anthropic.skilljar.com/introduction-to-claude-cowork/444164?utm_source=chatgpt.com)
+
+---
+
+## Week 2 — Tool Design & MCP Integration
+
+* [Introduction to Model Context Protocol](https://anthropic.skilljar.com/introduction-to-model-context-protocol/296696?utm_source=chatgpt.com)
+* [Model Context Protocol: Advanced Topics](https://anthropic.skilljar.com/model-context-protocol-advanced-topics/296289?utm_source=chatgpt.com)
+* [Building with the Claude API](https://anthropic.skilljar.com/building-with-the-claude-api?utm_source=chatgpt.com)
+
+---
+
+## Week 3 — Claude Code Configuration & Workflows
+
+* [Claude Code 101](https://anthropic.skilljar.com/claude-code-101?utm_source=chatgpt.com)
+* [Claude Code in Action](https://anthropic.skilljar.com/claude-code-in-action?utm_source=chatgpt.com)
+* [Introduction to agent skills](https://anthropic.skilljar.com/introduction-to-agent-skills?utm_source=chatgpt.com)
+* [Introduction to subagents](https://anthropic.skilljar.com/introduction-to-subagents?utm_source=chatgpt.com)
+
+---
+
+## Week 4 — Prompt Engineering & Structured Output
+
+* [Building with the Claude API](https://anthropic.skilljar.com/building-with-the-claude-api?utm_source=chatgpt.com)
+* [AI Fluency: Framework & Foundations](https://anthropic.skilljar.com/ai-fluency-framework-foundations?utm_source=chatgpt.com)
+
+---
+
+## Week 5 — Context Management & Reliability
+
+* [Introduction to Claude Cowork](optional) (https://anthropic.skilljar.com/introduction-to-claude-cowork/444164?utm_source=chatgpt.com)
+* [Introduction to subagents](https://anthropic.skilljar.com/introduction-to-subagents?utm_source=chatgpt.com)
+* [Claude Code in Action](https://anthropic.skilljar.com/claude-code-in-action?utm_source=chatgpt.com)
+
+---
+
+# ⭐ Most Important Courses (80/20)
+
+If someone has limited time, these are the must-complete courses:
+
+1. [Building with the Claude API](https://anthropic.skilljar.com/building-with-the-claude-api?utm_source=chatgpt.com)
+2. [Introduction to Model Context Protocol](https://anthropic.skilljar.com/introduction-to-model-context-protocol/296696?utm_source=chatgpt.com)
+3. [Claude Code 101](https://anthropic.skilljar.com/claude-code-101?utm_source=chatgpt.com)
+4. [Claude Code in Action](https://anthropic.skilljar.com/claude-code-in-action?utm_source=chatgpt.com)
+5. [Introduction to agent skills](https://anthropic.skilljar.com/introduction-to-agent-skills?utm_source=chatgpt.com)
+6. [Introduction to subagents](https://anthropic.skilljar.com/introduction-to-subagents?utm_source=chatgpt.com)
+
+--
+---
+
+This verified list is safe to include directly in your PDF guide and ensures every course title matches what learners will actually see in Anthropic Skilljar.

@@ -1,0 +1,169 @@
+You are an expert Claude Architect, mentor, and technical content creator.
+
+Your task is to create a concise, practical, high-value PDF guide for professionals preparing for the Claude Certified Architect – Foundations (CCA-F) exam.
+
+The purpose of this guide is NOT to create a massive textbook.
+
+The goal is to help aspiring candidates:
+
+* understand the preparation roadmap,
+* know what actually matters,
+* focus on high-impact concepts,
+* avoid wasting time,
+* and learn from my real preparation journey.
+
+Use the provided Markdown outline as the base structure, but simplify and optimize it for clarity and usefulness.
+
+Also use:
+`CCAF_Exam_Tips_and_Learnings.txt`
+to enrich the guide with:
+
+* real exam observations,
+* practical preparation tips,
+* domain-wise important concepts,
+* common mistakes,
+* and hands-on learning insights.
+
+The guide should feel like:
+“Someone who recently cleared the exam sharing the exact preparation strategy, important topics, and resources that actually helped.”
+
+TARGET AUDIENCE
+
+* Working professionals
+* AI Engineers
+* Data Engineers
+* Developers
+* Architects
+* Beginners exploring agentic AI systems
+
+WRITING STYLE
+
+* Conversational
+* Mentor-like
+* Easy to understand
+* Practical and direct
+* No unnecessary fluff
+* No overly academic explanations
+
+IMPORTANT OBJECTIVES
+
+This guide should primarily focus on:
+
+1. My 5-Week Preparation Roadmap
+
+* What I studied each week
+* Which Skilljar courses I completed
+* Which concepts I focused on
+* What hands-on practice I did
+* How much time I spent
+
+2. Important Topics from Each Domain
+   For each domain include:
+
+* High-priority concepts
+* Most tested patterns
+* Key terminology
+* Common traps
+* Important architectural principles
+* Things worth memorizing
+* Practical understanding required
+
+3. Exam Tips & Learnings
+   Examples:
+
+* How questions are framed
+* What surprised me
+* Scenario-based thinking
+* Time management
+* Elimination strategy
+* Common mistakes candidates make
+* Areas where hands-on knowledge matters
+
+4. Best Resources
+   Clearly organize:
+
+* Verified Anthropic Skilljar courses
+* Official study guide
+* Practice exams
+* Claude Code docs
+* YouTube videos
+* Community resources
+* Any additional helpful resources
+
+5. Actionable Guidance
+   The reader should finish the guide knowing:
+
+* exactly what to study,
+* what to prioritize,
+* what to practice,
+* and how to prepare efficiently.
+
+CONTENT GUIDELINES
+
+1. Reduce unnecessary theory.
+   Avoid long conceptual explanations unless they directly help with:
+
+* exam preparation,
+* practical understanding,
+* or architectural reasoning.
+
+2. Keep chapters concise and highly scannable.
+   Use:
+
+* bullets,
+* tables,
+* checklists,
+* summaries,
+* quick tips,
+* and callout boxes.
+
+3. Add sections like:
+
+* “Most Important Concepts”
+* “What Anthropic is Testing”
+* “Common Exam Trap”
+* “My Personal Tip”
+* “Must-Do Hands-On Practice”
+
+4. Prioritize authenticity.
+   Do not invent personal experiences.
+   If personal details are missing, ask questions before drafting those sections.
+
+5. Keep the PDF focused and concise.
+   Target:
+
+* 20–30 pages maximum
+* High signal, low noise
+
+6. The guide should feel curated and practical — not AI-generated filler.
+
+7. Use the verified Skilljar course mapping already available in the outline:
+
+* Week 1 → Agentic Architecture
+* Week 2 → Tool Design & MCP
+* Week 3 → Claude Code
+* Week 4 → Prompt Engineering
+* Week 5 → Context Management & Reliability
+
+8. Add a “Top 20% Topics That Matter Most” section.
+   Prioritize:
+
+* stop_reason
+* hooks vs prompts
+* MCP scoping
+* tool descriptions
+* CLAUDE.md hierarchy
+* plan mode
+* tool_use + JSON schema
+* validation loops
+* escalation logic
+* structured errors
+* context management patterns
+
+9. Include practical advice for working professionals with limited study time.
+
+10. Before drafting the guide:
+
+* analyze the files,
+* identify gaps,
+* and ask me focused questions to improve authenticity and quality.
